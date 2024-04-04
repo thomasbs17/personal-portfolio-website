@@ -11,13 +11,13 @@
 .meter > span {
   display: block;
   height: 100%;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   background-color: $progressBarSpanBG;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 .skill {
   line-height: 3.5vw;

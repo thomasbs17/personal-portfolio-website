@@ -1,0 +1,58 @@
+@import "../../_globalColor";
+
+.about-main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.about-me-main {
+  display: flex;
+}
+
+.about-me-main {
+  display: flex;
+}
+
+.about-me-main > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+.button-about-me-div {
+  display: flex;
+  margin-top: 20px;
+}
+
+.about-me-text {
+  font-size: 70px;
+  line-height: 1.1;
+  color: $textColor !important;
+}
+
+.about-me-text-p {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.about-me-image-div > img {
+  max-width: 100%;
+  height: auto;
+}
+
+.animated-line {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 10;
+  animation: dash 5s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 100;
+  }
+
+  to {
+    stroke-dashoffset: 20;
+  }
+}

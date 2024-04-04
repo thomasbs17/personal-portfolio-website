@@ -1,11 +1,14 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React, {useContext} from "react";
-import "./Skills.scss";
-import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
-import {illustration, skillsSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import codingPerson from "../../assets/lottie/codingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
+import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import StyleContext from "../../contexts/StyleContext";
+import {illustration, skillsSection} from "../../portfolio";
+import "./Skills.scss";
+
+import Carousel from "react-bootstrap/Carousel";
 
 export default function Skills() {
   const {isDark} = useContext(StyleContext);
@@ -28,39 +31,36 @@ export default function Skills() {
           </div>
         </Fade>
         <Fade right duration={1000}>
-          <div className="skills-text-div">
-            <h1
-              className={isDark ? "dark-mode skills-heading" : "skills-heading"}
-            >
-              {skillsSection.title}{" "}
-            </h1>
-            <p
-              className={
-                isDark
-                  ? "dark-mode subTitle skills-text-subtitle"
-                  : "subTitle skills-text-subtitle"
-              }
-            >
-              {skillsSection.subTitle}
-            </p>
-            <SoftwareSkill />
-            <div>
-              {skillsSection.skills.map((skills, i) => {
-                return (
-                  <p
-                    key={i}
-                    className={
-                      isDark
-                        ? "dark-mode subTitle skills-text"
-                        : "subTitle skills-text"
-                    }
-                  >
-                    {skills}
-                  </p>
-                );
-              })}
+          <>
+            <div className="skills-text-div">
+              <h1
+                className={
+                  isDark ? "dark-mode skills-heading" : "skills-heading"
+                }
+              >
+                {skillsSection.title}{" "}
+              </h1>
+              <p className={isDark && "dark-mode"}>{skillsSection.subTitle}</p>
+              <SoftwareSkill />
             </div>
-          </div>
+          </>
+        </Fade>
+      </div>
+      <div style={{height: "500px"}}>
+        <Fade left duration={1000}>
+          <h1>Why Working With Me?</h1>
+          <Carousel>
+            {skillsSection.skills.map((skills, i) => {
+              return (
+                <Carousel.Item style={{height: "300px"}}>
+                  <Carousel.Caption>
+                    <h3>{skills.title}</h3>
+                    <p>{skills.description}</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              );
+            })}
+          </Carousel>
         </Fade>
       </div>
     </div>

@@ -1,8 +1,31 @@
-/* Change this file to get your personal Portfolio */
-
 // To change portfolio colors globally go to the  _globalColor.scss file
 
 import emoji from "react-easy-emoji";
+import {CiDatabase} from "react-icons/ci";
+import {DiGoogleCloudPlatform, DiPostgresql, DiRedis} from "react-icons/di";
+import {
+  FaAngular,
+  FaAws,
+  FaDocker,
+  FaEthereum,
+  FaJava,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+  FaRegSnowflake
+} from "react-icons/fa";
+import {GiArtificialIntelligence, GiParrotHead} from "react-icons/gi";
+import {IoLogoJavascript} from "react-icons/io";
+import {IoLogoFirebase} from "react-icons/io5";
+import {RiFileExcel2Line} from "react-icons/ri";
+import {
+  SiKubernetes,
+  SiPytorch,
+  SiScikitlearn,
+  SiStreamlit,
+  SiTensorflow
+} from "react-icons/si";
+
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
 // Splash Screen
@@ -20,101 +43,216 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Thomas Bouamoud",
+  title: "Hi all, I'm Thomas Bouamoud",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "A passionate French 🇫🇷 Full Stack Software Developer 🚀, currenlly based in London UK 🇬🇧, having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1lgv26WK1YiE6Yim8v8tWesISdLKOReEg/view?usp=drive_link", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
+  github: "https://github.com/thomasbs17",
+  linkedin: "https://www.linkedin.com/in/thomas-bouamoud-s%C3%A9osse-55467aab/",
+  yahoo: "thomasbs17@yahoo.fr",
+  gmail: "thomas.bouamoud@gmail.com",
   display: true // Set true to display this section, defaults to false
 };
 
 // Skills Section
 
 const skillsSection = {
-  title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  title: "My Stack",
+  subTitle: "AMBITIOUS DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
   skills: [
-    emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-    ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
+    {
+      title: "💻 Full Stack Expertise",
+      description:
+        "Proficient in managing end-to-end project development, seamlessly navigating through backend, front-end, infrastructure, cloud services and database management to deliver comprehensive solutions with efficiency and excellence."
+    },
+    {
+      title: "📈 Strategic Business Acumen",
+      description:
+        "Possess extensive experience collaborating with diverse stakeholders across multifaceted industries, adept at understanding and addressing business needs, ensuring alignment between technology solutions and organizational objectives for optimal results."
+    },
+    {
+      title: "🤖 Cutting-Edge AI Integration",
+      description:
+        "Proven ability to leverage advanced machine learning and AI methodologies, including Language Models (LLMs), to tackle intricate business challenges, driving innovation and delivering tailored solutions that drive growth and competitiveness in dynamic market landscapes."
+    },
+    {
+      title: "💹 Specialized Financial Expertis",
+      description:
+        "Demonstrated proficiency in high-stakes environments, having contributed to ultralow latency financial trading projects, showcasing a keen understanding of the intricacies and demands of the financial sector while consistently delivering robust and reliable solutions."
+    }
   ],
 
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
-
   softwareSkills: [
+    // ADD: Airflow, PowerApps, PowerBI, Tableau, Photoshop, Figma, Jenkins, GitHib, BitBucket
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      stackType: "Back-End",
+      stackName: "Python",
+      proficiency: 1,
+      icon: <FaPython />,
+      link: "https://www.python.org/"
     },
     {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      stackType: "Back-End",
+      stackName: "nodejs",
+      proficiency: 0.6,
+      icon: <FaNodeJs />,
+      link: "https://nodejs.org/en"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
+      stackType: "Back-End",
+      stackName: "Java",
+      proficiency: 0.3,
+      icon: <FaJava />,
+      link: "https://www.java.com/en/"
     },
     {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
+      stackType: "Back-End",
+      stackName: "VBA",
+      proficiency: 0.8,
+      icon: <RiFileExcel2Line />,
+      link: "https://learn.microsoft.com/en-us/office/vba/library-reference/concepts/getting-started-with-vba-in-office"
     },
     {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
+      stackType: "Front-End",
+      stackName: "JavaScript",
+      proficiency: 0.8,
+      icon: <IoLogoJavascript />,
+      link: "https://www.javascript.com/"
     },
     {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
+      stackType: "Front-End",
+      stackName: "ReactJS",
+      proficiency: 0.9,
+      icon: <FaReact />,
+      link: "https://react.dev/"
     },
     {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
+      stackType: "Front-End",
+      stackName: "Angular",
+      proficiency: 0.2,
+      icon: <FaAngular />,
+      link: "https://angular.io/"
     },
     {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      stackType: "Front-End",
+      stackName: "Streamlit",
+      proficiency: 1,
+      icon: <SiStreamlit />,
+      link: "https://streamlit.io/"
     },
     {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
+      stackType: "Database",
+      stackName: "Oracle",
+      proficiency: 0.95,
+      icon: <CiDatabase />,
+      link: "https://www.oracle.com/uk/database/"
     },
     {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
+      stackType: "Database",
+      stackName: "Snowflake",
+      proficiency: 0.93,
+      icon: <FaRegSnowflake />,
+      link: "https://www.snowflake.com/en/"
     },
     {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
+      stackType: "Database",
+      stackName: "PostgreSQL",
+      proficiency: 0.91,
+      icon: <DiPostgresql />,
+      link: "https://www.postgresql.org/"
     },
     {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
+      stackType: "Database",
+      stackName: "Redis",
+      proficiency: 0.9,
+      icon: <DiRedis />,
+      link: "https://redis.io/"
     },
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      stackType: "Database",
+      stackName: "Firebase",
+      proficiency: 0.2,
+      icon: <IoLogoFirebase />,
+      link: "https://firebase.google.com/"
+    },
+    {
+      stackType: "Cloud/CI-CD",
+      stackName: "aws",
+      proficiency: 0.7,
+      icon: <FaAws />,
+      link: "https://aws.amazon.com/"
+    },
+    {
+      stackType: "Cloud/CI-CD",
+      stackName: "GCP",
+      proficiency: 0.4,
+      icon: <DiGoogleCloudPlatform />,
+      link: "https://cloud.google.com/gcp"
+    },
+    {
+      stackType: "Cloud/CI-CD",
+      stackName: "docker",
+      proficiency: 0.88,
+      icon: <FaDocker />,
+      link: "https://www.docker.com/"
+    },
+    {
+      stackType: "Cloud/CI-CD",
+      stackName: "Kubernetes",
+      proficiency: 0.3,
+      icon: <SiKubernetes />,
+      link: "https://kubernetes.io/"
+    },
+    {
+      stackType: "AI",
+      stackName: "Scikit-learn",
+      proficiency: 0.84,
+      icon: <SiScikitlearn />,
+      link: "https://scikit-learn.org/"
+    },
+    {
+      stackType: "AI",
+      stackName: "TensorFlow",
+      proficiency: 0.7,
+      icon: <SiTensorflow />,
+      link: "https://www.tensorflow.org/"
+    },
+    {
+      stackType: "AI",
+      stackName: "LangChain",
+      proficiency: 0.82,
+      icon: <GiParrotHead />,
+      link: "https://www.langchain.com/"
+    },
+    {
+      stackType: "AI",
+      stackName: "PyTorch",
+      proficiency: 0.5,
+      icon: <SiPytorch />,
+      link: "https://pytorch.org/"
+    },
+    {
+      stackType: "AI",
+      stackName: "SageMaker",
+      proficiency: 0.4,
+      icon: <GiArtificialIntelligence />,
+      link: "https://aws.amazon.com/pm/sagemaker/"
+    },
+    {
+      stackType: "Web3",
+      stackName: "Solidity",
+      proficiency: 0.1,
+      icon: <FaEthereum />,
+      link: "https://docs.soliditylang.org/en/v0.8.25/s"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -126,23 +264,78 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
+      schoolName: "Kedge Business School",
+      url: "https://student.kedge.edu/",
+      logo: require("./assets/images/kedgeLogo.png"),
+      subHeader: emoji("MSc in Finance | Bordeaux, France 🇫🇷"),
+      duration: "2012 - 2017",
+      desc: "Main courses:",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Financial Risk Management & Derivative Markets",
+        "Econometrics & Financial Modelling",
+        "Advanced Corporate Finance"
       ]
     },
     {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
+      schoolName: "Unversidad de Belgrano",
+      url: "https://www.ub.edu.ar/",
+      logo: require("./assets/images/BelgranoLogo.png"),
+      subHeader: emoji("MBA IN FINANCE | Buenos Aires, Argentina 🇦🇷"),
+      duration: "2016",
+      desc: (
+        <>
+          Projects
+          <ul>
+            <li>
+              <>Tulane University (Burkenroad Report Latin America):</>
+              <i>
+                {" "}
+                Issued a DCF-based firm valuation of the Argentine chain of
+                supermarkets
+              </i>{" "}
+              <a
+                href="https://supermercado.laanonimaonline.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                ”La Anónima”
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://prodibur.sba.com.ar/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                PRO.DI.BUR:
+              </a>
+              <i>
+                {" "}
+                Stock exchange trading simulation operated on the MERVAL (Buenos
+                Aires Stock Exchange) with portfolio restrictions of 50% private
+                assets and 50% public bonds.
+              </i>
+            </li>
+          </ul>
+          <p>Main courses</p>
+        </>
+      ),
+      descBullets: [
+        "Portfolio Management",
+        "Derivatives",
+        "Firm Valuation",
+        "International Financial Structure",
+        "Capital Markets"
+      ]
+    },
+    {
+      schoolName: "Unversidad Rey Juan Carlos",
+      url: "https://www.urjc.es/",
+      logo: require("./assets/images/URJClogo.png"),
+      subHeader: emoji("Bachelor's degree in Marketing | Madrid, Spain 🇪🇸"),
       duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      desc: "",
+      descBullets: []
     }
   ]
 };
@@ -174,29 +367,72 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: (
+        <>
+          Principal* Software Engineer
+          <br />
+          <i style={{fontSize: 12}}>*(Principal since 2023)</i>
+        </>
+      ),
+      company: "Fidelity Investments",
+      url: "https://www.fidelity.com/",
+      companylogo: require("./assets/images/fidelityLogo.png"),
+      date: "April 2022 – Present",
+      desc: "Fidelity Investments offers Financial Planning and Advice, Retirement Plans, Wealth Management Services, Trading and Brokerage services, and a wide range of investment products including Mutual Funds, ETFs, Fixed income Bonds and CDs and much more.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Led an international team of 4 data and software engineers across 3 cities (London, Boston & Chicago)",
+        "Interfaced with Business Leaders and SMEs to articulate complex business logics and identify key challenges",
+        "Design optimal software architectures with a three-layer focus: Security, Scalability and Cost-Control (FinOps)",
+        "Full-stack implementation (Back/Front-End, Infra & DevOps, Databases & ETL)",
+        "Support the Data Scientist team by maintaining modern stack (e.g., tailored Python packages) and CI/CD pipelines",
+        "Led the Citizen Developer program by developing a governance, support, and report framework & by offering highly curated low-code solutions to help unleash efficiency across Asset Management"
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
+      role: "Data Scientist",
+      company: "Hadada Financial",
+      url: "https://www.linkedin.com/company/hadada-financial/",
+      companylogo: require("./assets/images/hadadaLogo.jpeg"),
       date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: "Hadada offers banking solutions in Africa using a fintech framework to optimize banking workflows for customers.",
+      descBullets: [
+        "Close collaboration with key stakeholders including the engineering department architects, sales and the leadership team",
+        "Implemented ETL pipelines for web data collection using Selenium and reverse engineering techniques",
+        "Developed machine learning algorithms for financial forecasting and fraud detection management"
+      ]
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
+      role: "Risk & Compliance",
+      company: "H2O AM LLP",
+      url: "https://www.h2o-am.com/",
+      companylogo: require("./assets/images/h2oLogo.png"),
+      date: "May 2017 – May 2018",
+      desc: (
+        <>
+          Founded in 2010 and with offices in Paris, Monaco, London, Geneva and
+          Singapore, H2O AM is an independent asset management company, mainly
+          specialising in Global Macro strategies. Based on an investment
+          process developed over more than thirty years and on solid
+          quantitative engineering, the teams implement a discretionary
+          investment process based on a Top-Down and Value approach. Through
+          relative value strategies in bonds, currencies and equities, H2O AM
+          offers its clients the benefits of diversified alpha with assumed and
+          controlled risk over a defined time horizon.
+        </>
+      ),
+      descBullets: [
+        "Design & Implementation of automated Trade Surveillance solutions",
+        "Ops Lead on various projects: firm acquisitions, subsidiaries launch, funds full lifecycle (launch, mergers, liquidations, and cross-border registrations)",
+        "International regulatory filings (SEC/FINRA, FCA, MiFID II, EMIR, NFA/CFTC)"
+      ]
+    },
+    {
+      role: "Economic Cooperation Intern",
+      company: "French-Chilean Chamber of Commerce",
+      url: "https://www.camarafrancochilena.cl/",
+      companylogo: require("./assets/images/cciLogo.png"),
       date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: "The French-Chilean Chamber of Commerce and Industry brings together key stakeholders and business leaders from both sides of the ocean to engage in constructive dialogue and identify common challenges and solutions that will benefit both economies. Its primary objective is to  promote economic growth, and stimulate employment and innovation in the Franco-Chilean business community."
     }
   ]
 };
@@ -363,35 +599,34 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  email_address: "thomasbs17@yahoo.fr"
 };
 
 // Twitter Section
 
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  userName: "TotoshBouams",
+  display: false
 };
 
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
-  illustration,
+  achievementSection,
+  bigProjects,
+  blogSection,
+  contactInfo,
+  educationInfo,
   greeting,
+  illustration,
+  isHireable,
+  openSource,
+  podcastSection,
+  skillsSection,
   socialMediaLinks,
   splashScreen,
-  skillsSection,
-  educationInfo,
-  techStack,
-  workExperiences,
-  openSource,
-  bigProjects,
-  achievementSection,
-  blogSection,
   talkSection,
-  podcastSection,
-  contactInfo,
+  techStack,
   twitterDetails,
-  isHireable
+  workExperiences
 };

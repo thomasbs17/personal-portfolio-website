@@ -1,6 +1,6 @@
-import React, {useState, createRef} from "react";
-import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
+import React, {createRef, useState} from "react";
+import "./ExperienceCard.scss";
 
 export default function ExperienceCard({cardInfo, isDark}) {
   const [colorArrays, setColorArrays] = useState([]);
@@ -35,7 +35,11 @@ export default function ExperienceCard({cardInfo, isDark}) {
       <div style={{background: rgb(colorArrays)}} className="experience-banner">
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">
-          <h5 className="experience-text-company">{cardInfo.company}</h5>
+          <h5 className="experience-text-company">
+            <a href={cardInfo.url} rel="noreferrer" target="_blank">
+              {cardInfo.company}
+            </a>
+          </h5>
         </div>
 
         <img

@@ -35,9 +35,10 @@
   font-size: 28px;
   font-weight: 700;
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: visible;
   white-space: nowrap;
   height: 27px;
+  color: purple;
 }
 
 .education-roundedimg {
