@@ -224,36 +224,13 @@ export default function AboutMe() {
               About Me
             </h1>
             <Zoom bottom duration={1000} distance="40px">
-              <div style={{display: "flex", justifyContent: "space-between"}}>
-                <div style={{width: "800px", fontSize: "20px"}}>
-                  <p>
-                    As a seasoned financial professional with{" "}
-                    {new Date().getFullYear() - 2017} years of experience in
-                    Asset Management/Hedge Funds, I offer a distinctive
-                    perspective gained from working in diverse environments,
-                    ranging from startup structures to large corporations,
-                    across five different countries.
-                  </p>
-                  <p>
-                    My career kicked off in financial operations, where I
-                    refined my abilities in navigating intricate financial
-                    processes and delivering results under challenging
-                    conditions.
-                  </p>
-                  <p>
-                    As I progressed, I diversified my expertise into data and
-                    software engineering, seamlessly blending analytical skills
-                    with a fervor for financial markets.{" "}
-                  </p>
-                  <p>
-                    With a track record of delivering impactful solutions, I am
-                    enthusiastic about leveraging my extensive experience to
-                    drive innovation and assist organizations in reaching their
-                    goals.
-                  </p>
-                </div>
-                <AnimatedMap />
-              </div>
+              <iframe
+                title="my-international-experience"
+                src="https://uploads.knightlab.com/storymapjs/3330b7db611d6e61ed30c87f21850b4b/my-international-experiences/index.html"
+                frameborder="0"
+                width="90%"
+                height="600"
+              ></iframe>
             </Zoom>
           </div>
         </div>

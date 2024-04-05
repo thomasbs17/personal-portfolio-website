@@ -1,5 +1,8 @@
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useState} from "react";
+import Carousel from "react-bootstrap/Carousel";
+import Lottie from "react-lottie";
 import {Fade} from "react-reveal";
 import codingPerson from "../../assets/lottie/codingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
@@ -8,13 +11,33 @@ import StyleContext from "../../contexts/StyleContext";
 import {illustration, skillsSection} from "../../portfolio";
 import "./Skills.scss";
 
-import Carousel from "react-bootstrap/Carousel";
-
 export default function Skills() {
+  const [lottieData, setLottieData] = useState({});
+
+  useEffect(() => {
+    async function loadData() {
+      const data = await axios.get(
+        "https://lottie.host/f83a8446-f025-458d-899b-b14689dca0b8/7FlxzJyP2v.json"
+      );
+      setLottieData({test: data});
+    }
+    loadData();
+    console.log(lottieData);
+  }, []);
+
   const {isDark} = useContext(StyleContext);
   if (!skillsSection.display) {
     return null;
   }
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
+
   return (
     <div className={isDark ? "dark-mode main" : "main"} id="skills">
       <div className="skills-main-div">
@@ -52,7 +75,8 @@ export default function Skills() {
           <Carousel>
             {skillsSection.skills.map((skills, i) => {
               return (
-                <Carousel.Item style={{height: "300px"}}>
+                <Carousel.Item style={{height: "500px"}}>
+                  <DisplayLottie animationData={skills.lottieAnimation} />
                   <Carousel.Caption>
                     <h3>{skills.title}</h3>
                     <p>{skills.description}</p>

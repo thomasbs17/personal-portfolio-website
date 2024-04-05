@@ -25,7 +25,10 @@ import {
   SiStreamlit,
   SiTensorflow
 } from "react-icons/si";
-
+import ai from "./assets/lottie/ai.json";
+import businessAcumen from "./assets/lottie/businessAcumen.json";
+import financialExpertise from "./assets/lottie/financialExpertise.json";
+import fullStack from "./assets/lottie/fullStack.json";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 
 // Splash Screen
@@ -72,22 +75,26 @@ const skillsSection = {
     {
       title: "💻 Full Stack Expertise",
       description:
-        "Proficient in managing end-to-end project development, seamlessly navigating through backend, front-end, infrastructure, cloud services and database management to deliver comprehensive solutions with efficiency and excellence."
+        "Proficient in managing end-to-end project development, seamlessly navigating through backend, front-end, infrastructure, cloud services and database management to deliver comprehensive solutions with efficiency and excellence.",
+      lottieAnimation: fullStack
     },
     {
       title: "📈 Strategic Business Acumen",
       description:
-        "Possess extensive experience collaborating with diverse stakeholders across multifaceted industries, adept at understanding and addressing business needs, ensuring alignment between technology solutions and organizational objectives for optimal results."
+        "Possess extensive experience collaborating with diverse stakeholders across multifaceted industries, adept at understanding and addressing business needs, ensuring alignment between technology solutions and organizational objectives for optimal results.",
+      lottieAnimation: businessAcumen
     },
     {
       title: "🤖 Cutting-Edge AI Integration",
       description:
-        "Proven ability to leverage advanced machine learning and AI methodologies, including Language Models (LLMs), to tackle intricate business challenges, driving innovation and delivering tailored solutions that drive growth and competitiveness in dynamic market landscapes."
+        "Proven ability to leverage advanced machine learning and AI methodologies, including Language Models (LLMs), to tackle intricate business challenges, driving innovation and delivering tailored solutions that drive growth and competitiveness in dynamic market landscapes.",
+      lottieAnimation: ai
     },
     {
-      title: "💹 Specialized Financial Expertis",
+      title: "💹 Expert Financial Knowledge",
       description:
-        "Demonstrated proficiency in high-stakes environments, having contributed to ultralow latency financial trading projects, showcasing a keen understanding of the intricacies and demands of the financial sector while consistently delivering robust and reliable solutions."
+        "Demonstrated proficiency in high-stakes environments, having contributed to ultralow latency financial trading projects, showcasing a keen understanding of the intricacies and demands of the financial sector while consistently delivering robust and reliable solutions.",
+      lottieAnimation: financialExpertise
     }
   ],
 
@@ -452,9 +459,10 @@ const bigProjects = {
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/c-metrics-high-resolution-logo-transparent.png"),
+      projectName: "C-Metrics",
+      projectDesc:
+        "Introducing C-Metrics, your ultimate destination for revolutionary cryptocurrency trading. With access to over a hundred exchanges and thousands of pairs including spot, futures, perpetuals, and options, seize every opportunity in the dynamic crypto market. Experience ultra-low latency data for real-time insights and make informed decisions faster than ever. Engage with our vibrant social trading community, share insights, and collaborate for success. Customize your trading strategies with a rich array of indicators and conduct thorough backtesting for confidence in your approach. Streamline your portfolio with centralized management, and utilize our optimization and risk analytics tools to maximize returns while managing risk effectively. Join C-Metrics today and elevate your crypto trading experience to new heights.",
       footerLink: [
         {
           name: "Visit Website",
@@ -488,52 +496,93 @@ const achievementSection = {
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
-      subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+      title: "Google Cloud Skills Boost",
+      subtitle: "Introduction to Generative AI Learning Path",
+      image: require("./assets/images/Introduction to Generative AI Learning Path.png"),
+      imageAlt: "Google Cloud Skills Boost Logo",
       footerLink: [
         {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
+          name: "Introduction to Generative AI",
+          url: "https://www.cloudskillsboost.google/public_profiles/02cacd84-c95c-47c0-978a-01733732fbb3/badges/4192036?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
         },
         {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
+          name: "Attention Mechanism",
+          url: "https://www.google.com/url?q=https://www.cloudskillsboost.google/public_profiles/02cacd84-c95c-47c0-978a-01733732fbb3/badges/4137131?utm_medium%3Dsocial%26utm_source%3Dlinkedin%26utm_campaign%3Dql-social-share&sa=D&source=apps-viewer-frontend&ust=1712361613283760&usg=AOvVaw23Kw05RKN6RpvO03kuRA6F&hl=en-GB"
         },
         {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+          name: "Create Image Captioning Models",
+          url: "https://www.cloudskillsboost.google/public_profiles/02cacd84-c95c-47c0-978a-01733732fbb3/badges/4170924?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+        },
+        {
+          name: "Encode-Decoder Architecture",
+          url: "https://www.cloudskillsboost.google/public_profiles/02cacd84-c95c-47c0-978a-01733732fbb3/badges/4137064?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+        },
+        {
+          name: "Generative AI Fundamentals",
+          url: "https://www.cloudskillsboost.google/public_profiles/02cacd84-c95c-47c0-978a-01733732fbb3/badges/4136688?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+        },
+        {
+          name: "Introduction to Generative AI",
+          url: "https://www.cloudskillsboost.google/public_profiles/02cacd84-c95c-47c0-978a-01733732fbb3/badges/3938078?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+        },
+        {
+          name: "Introduction to Image Generation",
+          url: "https://www.cloudskillsboost.google/public_profiles/02cacd84-c95c-47c0-978a-01733732fbb3/badges/4136762?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+        },
+        {
+          name: "Introduction to LLMs",
+          url: "https://www.cloudskillsboost.google/public_profiles/02cacd84-c95c-47c0-978a-01733732fbb3/badges/3938338?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+        },
+        {
+          name: "Introduction to Responsible AI",
+          url: "https://www.cloudskillsboost.google/public_profiles/02cacd84-c95c-47c0-978a-01733732fbb3/badges/4136594?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+        },
+        {
+          name: "Transformer Models and BERT Model",
+          url: "https://www.cloudskillsboost.google/public_profiles/02cacd84-c95c-47c0-978a-01733732fbb3/badges/4137300?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
         }
       ]
     },
     {
-      title: "Google Assistant Action",
+      title: "Stanford Online (Coursera)",
+      link: "https://www.coursera.org/specializations/machine-learning-introduction",
       subtitle:
         "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
+      image: require("./assets/images/stanfordDeepLearning.png"),
+      imageAlt: "Stanford Online (Coursera) Logo",
       footerLink: [
         {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
+          name: "Unsupervised Learning, Recommenders, Reinforcement Learning",
+          url: "https://www.coursera.org/account/accomplishments/certificate/MPBM5923V8LF"
+        },
+        {
+          name: "Advanced Learning Algorithms",
+          url: "https://www.coursera.org/account/accomplishments/certificate/2EA8NQ26AZUJ"
+        },
+        {
+          name: "Supervised Machine Learning: Regression and Classification",
+          url: "https://www.coursera.org/account/accomplishments/certificate/9H9E7ATBZPN3"
         }
       ]
     },
-
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
-      ]
+      title: "AMF Certification",
+      link: "https://www.amf-france.org/fr",
+      subtitle:
+        "Received French and European Capital Market Regulation. “Autorité des Marchés Financiers” is the Financial Markets regulator in France",
+      image: "https://www.amf-france.org/themes/amf/logo.svg",
+      imageAlt: "AMF Logo",
+      footerLink: []
+    },
+    {
+      title: "Tulane University (Burkenroad Report Latin America)",
+      link: "https://freeman.tulane.edu/burkenroad-reports",
+      subtitle:
+        "Issued a DCF-based firm valuation of the Argentine chain of supermarkets ”La Anónima”",
+      image:
+        "https://freeman.tulane.edu/sites/default/files/burkenroad.logo.jpg",
+      imageAlt: "Burkenroad Logo",
+      footerLink: []
     }
   ],
   display: true // Set false to hide this section, defaults to true
