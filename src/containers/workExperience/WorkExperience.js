@@ -1,9 +1,10 @@
 import React, {useContext} from "react";
-import "./WorkExperience.scss";
-import ExperienceCard from "../../components/experienceCard/ExperienceCard";
-import {workExperiences} from "../../portfolio";
+import Carousel from "react-bootstrap/Carousel";
 import {Fade} from "react-reveal";
+import ExperienceCard from "../../components/experienceCard/ExperienceCard";
 import StyleContext from "../../contexts/StyleContext";
+import {workExperiences} from "../../portfolio";
+import "./WorkExperience.scss";
 
 export default function WorkExperience() {
   const {isDark} = useContext(StyleContext);
@@ -15,23 +16,27 @@ export default function WorkExperience() {
             <div>
               <h1 className="experience-heading">Experiences</h1>
               <div className="experience-cards-div">
-                {workExperiences.experience.map((card, i) => {
-                  return (
-                    <ExperienceCard
-                      key={i}
-                      isDark={isDark}
-                      cardInfo={{
-                        company: card.company,
-                        desc: card.desc,
-                        date: card.date,
-                        companylogo: card.companylogo,
-                        role: card.role,
-                        descBullets: card.descBullets,
-                        url: card.url
-                      }}
-                    />
-                  );
-                })}
+                <Carousel>
+                  {workExperiences.experience.map((card, i) => {
+                    return (
+                      <Carousel.Item>
+                        <ExperienceCard
+                          key={i}
+                          isDark={isDark}
+                          cardInfo={{
+                            company: card.company,
+                            desc: card.desc,
+                            date: card.date,
+                            companylogo: card.companylogo,
+                            role: card.role,
+                            descBullets: card.descBullets,
+                            url: card.url
+                          }}
+                        />
+                      </Carousel.Item>
+                    );
+                  })}
+                </Carousel>
               </div>
             </div>
           </div>

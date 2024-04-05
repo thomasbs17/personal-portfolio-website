@@ -396,16 +396,18 @@ const workExperiences = {
       ]
     },
     {
-      role: "Data Scientist",
-      company: "Hadada Financial",
-      url: "https://www.linkedin.com/company/hadada-financial/",
-      companylogo: require("./assets/images/hadadaLogo.jpeg"),
-      date: "May 2017 – May 2018",
-      desc: "Hadada offers banking solutions in Africa using a fintech framework to optimize banking workflows for customers.",
+      role: "Compliance Advisor - Trade Monitoring",
+      company: "Fidelity Investments",
+      url: "https://www.fidelity.com/",
+      companylogo: require("./assets/images/fidelityLogo.png"),
+      date: "October 2019 – April 2022",
+      desc: "Fidelity Investments offers Financial Planning and Advice, Retirement Plans, Wealth Management Services, Trading and Brokerage services, and a wide range of investment products including Mutual Funds, ETFs, Fixed income Bonds and CDs and much more.",
       descBullets: [
-        "Close collaboration with key stakeholders including the engineering department architects, sales and the leadership team",
-        "Implemented ETL pipelines for web data collection using Selenium and reverse engineering techniques",
-        "Developed machine learning algorithms for financial forecasting and fraud detection management"
+        "Monitoring of trade activities for equity and fixed income portfolios to ensure that their investment limits are followed",
+        "Communicating client, regulatory, prospectus, Board, and internal policies to portfolio managers and traders",
+        "Implementing automated mechanisms to provide timely reporting and monitoring of complex investment strategies",
+        "Full-stack implementation (Back/Front-End, Infra & DevOps, DatabasProvided senior management with information on current market trends and issues identified during assignments and recommend plans for improvementes & ETL)",
+        "Ensure ongoing partnership with local and global regulators and support regulatory change projects"
       ]
     },
     {
@@ -468,7 +470,40 @@ const bigProjects = {
           name: "Visit Website",
           url: "http://saayahealth.com/"
         }
-        //  you can add extra buttons here.
+      ]
+    },
+    {
+      image: require("./assets/images/hadadaLogo.jpeg"),
+      projectName: "Hadada Financial",
+      projectDesc: (
+        <div>
+          <p>
+            Hadada offers banking solutions in Africa using a fintech framework
+            to optimize banking workflows for customers
+          </p>
+          <ul>
+            I worked for Hadada as a Data Scientist. My responsibilities
+            included:
+          </ul>
+          <li>
+            Close collaboration with key stakeholders including the engineering
+            department architects, sales and the leadership team
+          </li>
+          <li>
+            Implemented ETL pipelines for web data collection using Selenium and
+            reverse engineering techniques
+          </li>
+          <li>
+            Developed machine learning algorithms for financial forecasting and
+            fraud detection management
+          </li>
+        </div>
+      ),
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "https://www.linkedin.com/company/hadada-financial/"
+        }
       ]
     },
     {

@@ -1,8 +1,6 @@
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, {useContext, useEffect, useState} from "react";
-import Carousel from "react-bootstrap/Carousel";
-import Lottie from "react-lottie";
 import {Fade} from "react-reveal";
 import codingPerson from "../../assets/lottie/codingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
@@ -29,14 +27,6 @@ export default function Skills() {
   if (!skillsSection.display) {
     return null;
   }
-
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
 
   return (
     <div className={isDark ? "dark-mode main" : "main"} id="skills">
@@ -67,24 +57,6 @@ export default function Skills() {
               <SoftwareSkill />
             </div>
           </>
-        </Fade>
-      </div>
-      <div style={{height: "500px"}}>
-        <Fade left duration={1000}>
-          <h1>Why Working With Me?</h1>
-          <Carousel>
-            {skillsSection.skills.map((skills, i) => {
-              return (
-                <Carousel.Item style={{height: "500px"}}>
-                  <DisplayLottie animationData={skills.lottieAnimation} />
-                  <Carousel.Caption>
-                    <h3>{skills.title}</h3>
-                    <p>{skills.description}</p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-              );
-            })}
-          </Carousel>
         </Fade>
       </div>
     </div>

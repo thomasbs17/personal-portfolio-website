@@ -214,7 +214,7 @@ function AnimatedMap() {
 export default function AboutMe() {
   const {isDark} = useContext(StyleContext);
   return (
-    <div className="about-main" id="greeting">
+    <div className="about-main" id="about-me">
       <div className="about-me-main">
         <div className="about-me-text-div">
           <div>
