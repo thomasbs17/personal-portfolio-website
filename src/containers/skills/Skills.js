@@ -21,7 +21,7 @@ export default function Skills() {
     }
     loadData();
     console.log(lottieData);
-  }, []);
+  });
 
   const {isDark} = useContext(StyleContext);
   if (!skillsSection.display) {
@@ -34,7 +34,7 @@ export default function Skills() {
         <Fade left duration={1000}>
           <div className="skills-image-div">
             {illustration.animated ? (
-              <DisplayLottie animationData={codingPerson} />
+              <DisplayLottie animationData={codingPerson} height={600} />
             ) : (
               <img
                 alt="Man Working"

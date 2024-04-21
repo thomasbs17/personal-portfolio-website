@@ -1,14 +1,46 @@
 import React, {useContext} from "react";
-import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
-import "./Greeting.scss";
+import {Fade} from "react-reveal";
+import {TypeAnimation} from "react-type-animation";
 import landingPerson from "../../assets/lottie/landingPerson";
+import Button from "../../components/button/Button";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import Button from "../../components/button/Button";
+import "./Greeting.scss";
 
-import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import {greeting, illustration} from "../../portfolio";
+
+function AnimatedText() {
+  const sequences = [
+    "I am a full stack software engineer 👨‍💻",
+    1000,
+    "I am a Financial Industry professional 💹",
+    1000,
+    "I am currently based in London ☕ 💂",
+    1000,
+    "I am from France 🥐 🍷 🧀",
+    1000,
+    // "I am versed with back-end, front-end, databases, API, modern cloud architecture 🖥️ ☁️",
+    // 1000,
+    "I am a dancer 🕺 and a boxer 🥊",
+    1000
+  ];
+  return (
+    <TypeAnimation
+      preRenderFirstString={true}
+      speed={75}
+      sequence={sequences}
+      repeat={Infinity}
+      style={{
+        fontSize: "30px",
+        display: "inline-block",
+        color: "rgba(255, 0, 255, 0.6)"
+      }}
+    />
+    // <div><span>I</span><span>am</span></div>
+  );
+}
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
@@ -16,8 +48,8 @@ export default function Greeting() {
     return null;
   }
   return (
-    <Fade bottom duration={1000} distance="40px">
-      <div className="greet-main" id="greeting">
+    <div className="greet-main" id="greeting">
+      <Fade bottom duration={1000} distance="40px">
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>
@@ -35,7 +67,7 @@ export default function Greeting() {
                     : "greeting-text-p subTitle"
                 }
               >
-                {greeting.subTitle}
+                <AnimatedText />
               </p>
               <SocialMedia />
               <div className="button-greeting-div">
@@ -52,7 +84,7 @@ export default function Greeting() {
           </div>
           <div>
             {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} />
+              <DisplayLottie animationData={landingPerson} height={600} />
             ) : (
               <img
                 alt="man sitting on table"
@@ -61,7 +93,7 @@ export default function Greeting() {
             )}
           </div>
         </div>
-      </div>
-    </Fade>
+      </Fade>
+    </div>
   );
 }

@@ -3,10 +3,12 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-quartz.css";
 import "ag-grid-enterprise";
 import {AgGridReact} from "ag-grid-react";
-import React, {useCallback, useMemo, useRef, useState} from "react";
+import React, {useCallback, useMemo, useRef, useState, useContext} from "react";
 import {skillsSection} from "../../portfolio";
 import "./Progress.scss";
 import "./SoftwareSkill.scss";
+import {IconContext} from "react-icons";
+import StyleContext from "../../contexts/StyleContext";
 
 function renderCellWithImage(text) {
   let IconElement = null;
@@ -30,7 +32,15 @@ function renderCellWithImage(text) {
         gap: "20px"
       }}
     >
-      {IconElement}
+      <IconContext.Provider
+        value={{
+          outline: "none",
+          borderColor: "#9ecaed",
+          boxShadow: "0 0 10px #9ecaed"
+        }}
+      >
+        {IconElement}
+      </IconContext.Provider>
       <a href={link} rel="noreferrer" target="_blank">
         {text}
       </a>
@@ -73,7 +83,7 @@ function OrderStatusChip(stackType) {
       return (
         <Chip label={stackType} color="error" variant="outlined" size="small" />
       );
-    case "Cloud/Infra":
+    case "Dev Ops":
       return (
         <Chip
           label={stackType}
@@ -95,6 +105,12 @@ function OrderStatusChip(stackType) {
           size="small"
         />
       );
+    case "Business Intelligence":
+      return <Chip label={stackType} color="primary" size="small" />;
+    case "IDE":
+      return <Chip label={stackType} color="secondary" size="small" />;
+    case "Version Control":
+      return <Chip label={stackType} color="warning" size="small" />;
     default:
       return (
         <Chip label={stackType} color="error" variant="outlined" size="small" />
@@ -104,6 +120,7 @@ function OrderStatusChip(stackType) {
 
 export default function SoftwareSkill() {
   const gridRef = useRef(null);
+  const {isDark} = useContext(StyleContext);
 
   const containerStyle = useMemo(() => ({width: "100%", height: "500px"}), []);
   const gridStyle = useMemo(() => ({width: "100%", height: "500px"}), []);
@@ -113,14 +130,14 @@ export default function SoftwareSkill() {
   const [columnDefs] = useState([
     {
       field: "stackType",
-      maxWidth: 150,
+      maxWidth: 170,
       cellRenderer: params => {
         return OrderStatusChip(params.value);
       }
     },
     {
       field: "stackName",
-      maxWidth: 200,
+      maxWidth: 230,
       cellRenderer: params => {
         return renderCellWithImage(params.value);
       }
@@ -146,12 +163,11 @@ export default function SoftwareSkill() {
         return b.proficiency - a.proficiency;
       })
     );
-    // setRowData(formattedData)
   }, []);
 
   return (
     <div style={containerStyle}>
-      <div className={"ag-theme-quartz-dark"} style={gridStyle}>
+      <div className={`ag-theme-quartz${isDark && "-dark"}`} style={gridStyle}>
         <AgGridReact
           ref={gridRef}
           rowData={rowData}

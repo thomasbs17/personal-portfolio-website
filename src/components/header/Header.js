@@ -3,11 +3,9 @@ import Headroom from "react-headroom";
 import StyleContext from "../../contexts/StyleContext";
 import {
   achievementSection,
-  blogSection,
   greeting,
   openSource,
   skillsSection,
-  talkSection,
   workExperiences
 } from "../../portfolio";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
@@ -19,8 +17,6 @@ function Header() {
   const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
   const viewAchievement = achievementSection.display;
-  const viewBlog = blogSection.display;
-  const viewTalks = talkSection.display;
 
   return (
     <Headroom>

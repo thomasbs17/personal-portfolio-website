@@ -20,14 +20,18 @@ export default function WhyWorkingWithMe() {
     >
       <Fade left duration={1000}>
         <h1>Why Working With Me?</h1>
-        <Carousel>
+        <Carousel interval={null} variant={!isDark && "dark"}>
           {skillsSection.skills.map((skills, i) => {
             return (
               <Carousel.Item style={{height: "500px"}}>
                 <DisplayLottie animationData={skills.lottieAnimation} />
                 <Carousel.Caption>
-                  <h3>{skills.title}</h3>
-                  <p>{skills.description}</p>
+                  <h3 style={{color: isDark ? "white" : "black"}}>
+                    {skills.title}
+                  </h3>
+                  <p style={{color: isDark ? "white" : "black"}}>
+                    {skills.description}
+                  </p>
                 </Carousel.Caption>
               </Carousel.Item>
             );

@@ -16,7 +16,7 @@ export default function WorkExperience() {
             <div>
               <h1 className="experience-heading">Experiences</h1>
               <div className="experience-cards-div">
-                <Carousel>
+                <Carousel interval={null} variant={!isDark && "dark"}>
                   {workExperiences.experience.map((card, i) => {
                     return (
                       <Carousel.Item>

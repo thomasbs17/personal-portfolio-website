@@ -32,21 +32,9 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.yahoo ? (
-        <a
-          href={socialMediaLinks.yahoo}
-          className="icon-button yahoo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fab fa-yahoo"></i>
-          <span></span>
-        </a>
-      ) : null}
-
       {socialMediaLinks.gmail ? (
         <a
-          href={`mailto:${socialMediaLinks.gmail}`}
+          href={`mailto:${socialMediaLinks.yahoo}`}
           className="icon-button google"
           target="_blank"
           rel="noopener noreferrer"

@@ -6,8 +6,10 @@ import {DiGoogleCloudPlatform, DiPostgresql, DiRedis} from "react-icons/di";
 import {
   FaAngular,
   FaAws,
+  FaBitbucket,
   FaDocker,
   FaEthereum,
+  FaGithub,
   FaJava,
   FaNodeJs,
   FaPython,
@@ -15,16 +17,27 @@ import {
   FaRegSnowflake
 } from "react-icons/fa";
 import {GiArtificialIntelligence, GiParrotHead} from "react-icons/gi";
+import {GoCopilot} from "react-icons/go";
 import {IoLogoJavascript} from "react-icons/io";
 import {IoLogoFirebase} from "react-icons/io5";
 import {RiFileExcel2Line} from "react-icons/ri";
 import {
+  SiAdobephotoshop,
+  SiApacheairflow,
+  SiFigma,
+  SiGoogleanalytics,
+  SiJenkins,
   SiKubernetes,
+  SiPowerapps,
+  SiPowerbi,
+  SiPycharm,
   SiPytorch,
   SiScikitlearn,
   SiStreamlit,
+  SiTableau,
   SiTensorflow
 } from "react-icons/si";
+import {TbBrandVscode} from "react-icons/tb";
 import ai from "./assets/lottie/ai.json";
 import businessAcumen from "./assets/lottie/businessAcumen.json";
 import financialExpertise from "./assets/lottie/financialExpertise.json";
@@ -99,7 +112,6 @@ const skillsSection = {
   ],
 
   softwareSkills: [
-    // ADD: Airflow, PowerApps, PowerBI, Tableau, Photoshop, Figma, Jenkins, GitHib, BitBucket
     {
       stackType: "Back-End",
       stackName: "Python",
@@ -110,14 +122,14 @@ const skillsSection = {
     {
       stackType: "Back-End",
       stackName: "nodejs",
-      proficiency: 0.6,
+      proficiency: 0.68,
       icon: <FaNodeJs />,
       link: "https://nodejs.org/en"
     },
     {
       stackType: "Back-End",
       stackName: "Java",
-      proficiency: 0.3,
+      proficiency: 0.29,
       icon: <FaJava />,
       link: "https://www.java.com/en/"
     },
@@ -185,6 +197,13 @@ const skillsSection = {
       link: "https://redis.io/"
     },
     {
+      stackType: "Dev Ops",
+      stackName: "Apache Airflow",
+      proficiency: 0.88,
+      icon: <SiApacheairflow />,
+      link: "https://airflow.apache.org/"
+    },
+    {
       stackType: "Database",
       stackName: "Firebase",
       proficiency: 0.2,
@@ -192,28 +211,28 @@ const skillsSection = {
       link: "https://firebase.google.com/"
     },
     {
-      stackType: "Cloud/CI-CD",
-      stackName: "aws",
+      stackType: "Dev Ops",
+      stackName: "AWS",
       proficiency: 0.7,
       icon: <FaAws />,
       link: "https://aws.amazon.com/"
     },
     {
-      stackType: "Cloud/CI-CD",
+      stackType: "Dev Ops",
       stackName: "GCP",
       proficiency: 0.4,
       icon: <DiGoogleCloudPlatform />,
       link: "https://cloud.google.com/gcp"
     },
     {
-      stackType: "Cloud/CI-CD",
+      stackType: "Dev Ops",
       stackName: "docker",
       proficiency: 0.88,
       icon: <FaDocker />,
       link: "https://www.docker.com/"
     },
     {
-      stackType: "Cloud/CI-CD",
+      stackType: "Dev Ops",
       stackName: "Kubernetes",
       proficiency: 0.3,
       icon: <SiKubernetes />,
@@ -259,7 +278,91 @@ const skillsSection = {
       stackName: "Solidity",
       proficiency: 0.1,
       icon: <FaEthereum />,
-      link: "https://docs.soliditylang.org/en/v0.8.25/s"
+      link: "https://docs.soliditylang.org/en/"
+    },
+    {
+      stackType: "Business Intelligence",
+      stackName: "PowerApps",
+      proficiency: 0.77,
+      icon: <SiPowerapps />,
+      link: "https://www.microsoft.com/en-us/power-platform/products/power-apps"
+    },
+    {
+      stackType: "Business Intelligence",
+      stackName: "PowerBI",
+      proficiency: 0.43,
+      icon: <SiPowerbi />,
+      link: "https://www.microsoft.com/en-us/power-platform/products/power-bi"
+    },
+    {
+      stackType: "Business Intelligence",
+      stackName: "Tableau",
+      proficiency: 0.54,
+      icon: <SiTableau />,
+      link: "https://www.tableau.com/"
+    },
+    {
+      stackType: "Front-End",
+      stackName: "Figma",
+      proficiency: 0.14,
+      icon: <SiFigma />,
+      link: "https://www.figma.com/"
+    },
+    {
+      stackType: "Dev Ops",
+      stackName: "Jenkins",
+      proficiency: 0.65,
+      icon: <SiJenkins />,
+      link: "https://www.jenkins.io/"
+    },
+    {
+      stackType: "Version Control",
+      stackName: "GitHub",
+      proficiency: 1,
+      icon: <FaGithub />,
+      link: "https://github.com/"
+    },
+    {
+      stackType: "Version Control",
+      stackName: "BitBucket",
+      proficiency: 1,
+      icon: <FaBitbucket />,
+      link: "https://bitbucket.org/product"
+    },
+    {
+      stackType: "Dev Ops",
+      stackName: "GitHub Copilot",
+      proficiency: 0.49,
+      icon: <GoCopilot />,
+      link: "https://github.com/features/copilot"
+    },
+    {
+      stackType: "IDE",
+      stackName: "PyCharm",
+      proficiency: 1,
+      icon: <SiPycharm />,
+      link: "https://www.jetbrains.com/pycharm/"
+    },
+    {
+      stackType: "IDE",
+      stackName: "VS Code",
+      proficiency: 0.87,
+      icon: <TbBrandVscode />,
+      link: "https://code.visualstudio.com/"
+    },
+    {
+      stackType: "Front-End",
+      stackName: "Adobe Photoshop",
+      proficiency: 0.08,
+      icon: <SiAdobephotoshop />,
+      link: "https://www.adobe.com/products/photoshop.html"
+    },
+    {
+      stackType: "Front-End",
+      stackName: "Google Analytics",
+      proficiency: 0.62,
+      icon: <SiGoogleanalytics />,
+      link: "https://marketingplatform.google.com/"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -387,7 +490,7 @@ const workExperiences = {
       date: "April 2022 – Present",
       desc: "Fidelity Investments offers Financial Planning and Advice, Retirement Plans, Wealth Management Services, Trading and Brokerage services, and a wide range of investment products including Mutual Funds, ETFs, Fixed income Bonds and CDs and much more.",
       descBullets: [
-        "Led an international team of 4 data and software engineers across 3 cities (London, Boston & Chicago)",
+        "As a principal software engineer, co-led an international team of 4 data and software engineers spanning 3 cities (London, Boston, & Chicago).",
         "Interfaced with Business Leaders and SMEs to articulate complex business logics and identify key challenges",
         "Design optimal software architectures with a three-layer focus: Security, Scalability and Cost-Control (FinOps)",
         "Full-stack implementation (Back/Front-End, Infra & DevOps, Databases & ETL)",
@@ -406,7 +509,7 @@ const workExperiences = {
         "Monitoring of trade activities for equity and fixed income portfolios to ensure that their investment limits are followed",
         "Communicating client, regulatory, prospectus, Board, and internal policies to portfolio managers and traders",
         "Implementing automated mechanisms to provide timely reporting and monitoring of complex investment strategies",
-        "Full-stack implementation (Back/Front-End, Infra & DevOps, DatabasProvided senior management with information on current market trends and issues identified during assignments and recommend plans for improvementes & ETL)",
+        "Provided senior management with information on current market trends and issues identified during assignments and recommend plans for improvementes.",
         "Ensure ongoing partnership with local and global regulators and support regulatory change projects"
       ]
     },
@@ -416,23 +519,13 @@ const workExperiences = {
       url: "https://www.h2o-am.com/",
       companylogo: require("./assets/images/h2oLogo.png"),
       date: "May 2017 – May 2018",
-      desc: (
-        <>
-          Founded in 2010 and with offices in Paris, Monaco, London, Geneva and
-          Singapore, H2O AM is an independent asset management company, mainly
-          specialising in Global Macro strategies. Based on an investment
-          process developed over more than thirty years and on solid
-          quantitative engineering, the teams implement a discretionary
-          investment process based on a Top-Down and Value approach. Through
-          relative value strategies in bonds, currencies and equities, H2O AM
-          offers its clients the benefits of diversified alpha with assumed and
-          controlled risk over a defined time horizon.
-        </>
-      ),
+      desc: "H2O AM, established in 2010 with offices in major financial hubs, specializes in Global Macro strategies, employing a top-down and value-based investment approach to offer clients diversified alpha with controlled risk.",
       descBullets: [
-        "Design & Implementation of automated Trade Surveillance solutions",
-        "Ops Lead on various projects: firm acquisitions, subsidiaries launch, funds full lifecycle (launch, mergers, liquidations, and cross-border registrations)",
-        "International regulatory filings (SEC/FINRA, FCA, MiFID II, EMIR, NFA/CFTC)"
+        "Developed comprehensive trade monitoring platform: modules include Volatility, VaR (absolute and relative), TrackingError, Commitment, leverage computations, and more.",
+        "Managed international regulatory reporting for various authorities: FCA, SEC/FINRA, NFA/CFTC, EMIR, and more.",
+        "Oversaw audits on investment strategies, risks, and ISAE 3402 compliance.",
+        "Engaged with multiple regulators globally: CBI, AMF, FCA, CSSF, and others.",
+        "Led product initiatives: created new investment vehicles, managed mergers and liquidations, facilitated cross-border registrations, and handled updates to fund documentation."
       ]
     },
     {
@@ -441,7 +534,13 @@ const workExperiences = {
       url: "https://www.camarafrancochilena.cl/",
       companylogo: require("./assets/images/cciLogo.png"),
       date: "Jan 2015 – Sep 2015",
-      desc: "The French-Chilean Chamber of Commerce and Industry brings together key stakeholders and business leaders from both sides of the ocean to engage in constructive dialogue and identify common challenges and solutions that will benefit both economies. Its primary objective is to  promote economic growth, and stimulate employment and innovation in the Franco-Chilean business community."
+      desc: "The French-Chilean Chamber of Commerce and Industry brings together key stakeholders and business leaders from both sides of the ocean to engage in constructive dialogue and identify common challenges and solutions that will benefit both economies. Its primary objective is to  promote economic growth, and stimulate employment and innovation in the Franco-Chilean business community.",
+      descBullets: [
+        "Offered specialized economic support to French and Chilean companies entering each other's markets, crafting detailed industry reports to facilitate strategic decision-making.",
+        "Cultivated an active entrepreneurial community in Santiago through event organization.",
+        "Played a key role in the development of a new database.",
+        "Assisted in shaping the marketing strategy of the Chamber to enhance its visibility and impact."
+      ]
     }
   ]
 };
@@ -464,7 +563,7 @@ const bigProjects = {
       image: require("./assets/images/c-metrics-high-resolution-logo-transparent.png"),
       projectName: "C-Metrics",
       projectDesc:
-        "Introducing C-Metrics, your ultimate destination for revolutionary cryptocurrency trading. With access to over a hundred exchanges and thousands of pairs including spot, futures, perpetuals, and options, seize every opportunity in the dynamic crypto market. Experience ultra-low latency data for real-time insights and make informed decisions faster than ever. Engage with our vibrant social trading community, share insights, and collaborate for success. Customize your trading strategies with a rich array of indicators and conduct thorough backtesting for confidence in your approach. Streamline your portfolio with centralized management, and utilize our optimization and risk analytics tools to maximize returns while managing risk effectively. Join C-Metrics today and elevate your crypto trading experience to new heights.",
+        "Introducing C-Metrics, an ambitious coding project tailored for cryptocurrency trading enthusiasts. Leveraging Python, Postgres, Django, and Django Channels on the backend, and React on the frontend, this platform offers a sophisticated trading experience. Hosted on AWS with SageMaker integration for machine learning capabilities, C-Metrics provides access to over a hundred exchanges and thousands of trading pairs, including spot, futures, perpetuals, and options. With ElastiCache for caching, ECS and EKS for container orchestration, and Docker for seamless containerization, C-Metrics ensures scalability and reliability. Redis Stream is implemented for efficient data streaming, enabling ultra-low latency data access for real-time insights.",
       footerLink: [
         {
           name: "Visit Website",
@@ -477,26 +576,24 @@ const bigProjects = {
       projectName: "Hadada Financial",
       projectDesc: (
         <div>
+          <span>
+            Hadada leverages a fintech framework to enhance banking operations
+            across Africa, optimizing workflows to better serve customers.
+            During my tenure as a Data Scientist at Hadada, I played a pivotal
+            role in various aspects of the company's operations:"
+          </span>
           <p>
-            Hadada offers banking solutions in Africa using a fintech framework
-            to optimize banking workflows for customers
+            Working closely with essential stakeholders such as engineering
+            architects, sales teams, and company leadership.
           </p>
-          <ul>
-            I worked for Hadada as a Data Scientist. My responsibilities
-            included:
-          </ul>
-          <li>
-            Close collaboration with key stakeholders including the engineering
-            department architects, sales and the leadership team
-          </li>
-          <li>
-            Implemented ETL pipelines for web data collection using Selenium and
-            reverse engineering techniques
-          </li>
-          <li>
-            Developed machine learning algorithms for financial forecasting and
-            fraud detection management
-          </li>
+          <p>
+            Developing and implementing ETL pipelines to collect web data using
+            Selenium and reverse engineering techniques.
+          </p>
+          <p>
+            Utilizing machine learning algorithms to forecast financial trends
+            and manage fraud detection effectively.
+          </p>
         </div>
       ),
       footerLink: [
@@ -507,13 +604,13 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/bet365-logo.png"),
+      projectName: "BetXpert Bets Optimization",
+      projectDesc:
+        "Crafted using Python, MySQL, and Selenium, this project scours international basketball games for comprehensive data including odds, live scores, and player details, storing them in a dedicated database. Logistic Regression, KNeighborsClassifier, DecisionTreeClassifier, RandomForestClassifier, XGBoost, and Artificial Neural Network models were trained and rigorously assessed, favoring the 'precision' metric to address false positives. The final model, XGBoost, achieved 79% precision, deployed for real-time betting suggestions.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://nextu.se/"
+          name: "Project was discontinued to comply with Bet365 ant-scraping policy"
         }
       ]
     }
