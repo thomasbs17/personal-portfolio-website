@@ -58,13 +58,13 @@ export default function StartupProject() {
                     >
                       {project.projectName}
                     </h5>
-                    <p
+                    <div
                       className={
                         isDark ? "dark-mode card-subtitle" : "card-subtitle"
                       }
                     >
                       {project.projectDesc}
-                    </p>
+                    </div>
                     <br />
                     {project.footerLink ? (
                       <div className="project-card-footer">
@@ -76,6 +76,13 @@ export default function StartupProject() {
                                 isDark ? "dark-mode project-tag" : "project-tag"
                               }
                               onClick={() => openUrlInNewTab(link.url)}
+                              style={{
+                                wordWrap: "break-word",
+                                overflowWrap:
+                                  "break-word" /* For better compatibility */,
+                                whiteSpace: "normal",
+                                height: "fit-content"
+                              }}
                             >
                               {link.name}
                             </span>

@@ -19,7 +19,7 @@ export default function WorkExperience() {
                 <Carousel interval={null} variant={!isDark && "dark"}>
                   {workExperiences.experience.map((card, i) => {
                     return (
-                      <Carousel.Item>
+                      <Carousel.Item key={i}>
                         <ExperienceCard
                           key={i}
                           isDark={isDark}

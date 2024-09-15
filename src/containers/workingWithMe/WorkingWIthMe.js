@@ -8,9 +8,18 @@ import {skillsSection} from "../../portfolio";
 
 export default function WhyWorkingWithMe() {
   const {isDark} = useContext(StyleContext);
+  const color = isDark ? "0" : "255";
   if (!skillsSection.display) {
     return null;
   }
+
+  const highlightTextStyle = {
+    color: isDark ? "white" : "black",
+    backgroundColor: `rgb(${color} ${color} ${color} / 50%)`,
+    borderRadius: "15px",
+    position: "relative",
+    boxShadow: `0 0 15px rgba(${color},${color},${color}, 0.5), 0 0 30px rgba(${color},${color},${color}, 0.3), 0 0 45px rgba(${color},${color},${color}, 0.1)`
+  };
 
   return (
     <div
@@ -23,15 +32,11 @@ export default function WhyWorkingWithMe() {
         <Carousel interval={null} variant={!isDark && "dark"}>
           {skillsSection.skills.map((skills, i) => {
             return (
-              <Carousel.Item style={{height: "500px"}}>
+              <Carousel.Item style={{height: "500px"}} key={i}>
                 <DisplayLottie animationData={skills.lottieAnimation} />
                 <Carousel.Caption>
-                  <h3 style={{color: isDark ? "white" : "black"}}>
-                    {skills.title}
-                  </h3>
-                  <p style={{color: isDark ? "white" : "black"}}>
-                    {skills.description}
-                  </p>
+                  <h3 style={highlightTextStyle}>{skills.title}</h3>
+                  <p style={highlightTextStyle}>{skills.description}</p>
                 </Carousel.Caption>
               </Carousel.Item>
             );

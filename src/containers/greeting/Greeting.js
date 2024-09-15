@@ -21,8 +21,6 @@ function AnimatedText() {
     1000,
     "I am from France 🥐 🍷 🧀",
     1000,
-    // "I am versed with back-end, front-end, databases, API, modern cloud architecture 🖥️ ☁️",
-    // 1000,
     "I am a dancer 🕺 and a boxer 🥊",
     1000
   ];
@@ -84,7 +82,7 @@ export default function Greeting() {
           </div>
           <div>
             {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} height={600} />
+              <DisplayLottie animationData={landingPerson} />
             ) : (
               <img
                 alt="man sitting on table"

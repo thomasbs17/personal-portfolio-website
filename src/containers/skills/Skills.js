@@ -20,7 +20,6 @@ export default function Skills() {
       setLottieData({test: data});
     }
     loadData();
-    console.log(lottieData);
   });
 
   const {isDark} = useContext(StyleContext);
