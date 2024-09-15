@@ -18,6 +18,7 @@ Object.defineProperty(window, "matchMedia", {
 
 it("renders without crashing", () => {
   const div = document.createElement("div");
-  ReactDOM.render(<App />, div);
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<App />);
   ReactDOM.unmountComponentAtNode(div);
 });

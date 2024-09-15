@@ -19,7 +19,6 @@ export default function AboutMe() {
               <iframe
                 title="my-international-experience"
                 src="https://uploads.knightlab.com/storymapjs/3330b7db611d6e61ed30c87f21850b4b/my-international-experiences/index.html"
-                frameborder="0"
                 width="90%"
                 height="600"
               ></iframe>
