@@ -566,8 +566,8 @@ const bigProjects = {
         "Introducing C-Metrics, an ambitious coding project tailored for cryptocurrency trading enthusiasts. Leveraging Python, Postgres, Django, and Django Channels on the backend, and React on the frontend, this platform offers a sophisticated trading experience. Hosted on AWS with SageMaker integration for machine learning capabilities, C-Metrics provides access to over a hundred exchanges and thousands of trading pairs, including spot, futures, perpetuals, and options. With ElastiCache for caching, ECS and EKS for container orchestration, and Docker for seamless containerization, C-Metrics ensures scalability and reliability. Redis Stream is implemented for efficient data streaming, enabling ultra-low latency data access for real-time insights.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
+          name: "View Code",
+          url: "https://github.com/thomasbs17/C-Metrics"
         }
       ]
     },
@@ -610,7 +610,7 @@ const bigProjects = {
         "Crafted using Python, MySQL, and Selenium, this project scours international basketball games for comprehensive data including odds, live scores, and player details, storing them in a dedicated database. Logistic Regression, KNeighborsClassifier, DecisionTreeClassifier, RandomForestClassifier, XGBoost, and Artificial Neural Network models were trained and rigorously assessed, favoring the 'precision' metric to address false positives. The final model, XGBoost, achieved 79% precision, deployed for real-time betting suggestions.",
       footerLink: [
         {
-          name: "Project was discontinued to comply with Bet365 ant-scraping policy"
+          name: "Project was discontinued to comply with Bet365 anti-scraping policy"
         }
       ]
     }
