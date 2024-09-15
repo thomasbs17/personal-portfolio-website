@@ -679,7 +679,7 @@ const achievementSection = {
       title: "Stanford Online (Coursera)",
       link: "https://www.coursera.org/specializations/machine-learning-introduction",
       subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
+        "Deep Learning Specialization",
       image: require("./assets/images/stanfordDeepLearning.png"),
       imageAlt: "Stanford Online (Coursera) Logo",
       footerLink: [
