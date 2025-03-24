@@ -20,7 +20,7 @@ export default function Skills() {
       setLottieData({test: data});
     }
     loadData();
-  });
+  }, []);
 
   const {isDark} = useContext(StyleContext);
   if (!skillsSection.display) {
