@@ -28,8 +28,8 @@ import {
   SiGoogleanalytics,
   SiJenkins,
   SiKubernetes,
-  SiPowerapps,
-  SiPowerbi,
+  // SiPowerapps,
+  // SiPowerbi,
   SiPycharm,
   SiPytorch,
   SiScikitlearn,
@@ -284,14 +284,14 @@ const skillsSection = {
       stackType: "Business Intelligence",
       stackName: "PowerApps",
       proficiency: 0.77,
-      icon: <SiPowerapps />,
+      icon: "", //<SiPowerapps />,
       link: "https://www.microsoft.com/en-us/power-platform/products/power-apps"
     },
     {
       stackType: "Business Intelligence",
       stackName: "PowerBI",
       proficiency: 0.43,
-      icon: <SiPowerbi />,
+      icon: "", //<SiPowerbi />,
       link: "https://www.microsoft.com/en-us/power-platform/products/power-bi"
     },
     {
@@ -678,8 +678,7 @@ const achievementSection = {
     {
       title: "Stanford Online (Coursera)",
       link: "https://www.coursera.org/specializations/machine-learning-introduction",
-      subtitle:
-        "Deep Learning Specialization",
+      subtitle: "Deep Learning Specialization",
       image: require("./assets/images/stanfordDeepLearning.png"),
       imageAlt: "Stanford Online (Coursera) Logo",
       footerLink: [
@@ -712,7 +711,7 @@ const achievementSection = {
       subtitle:
         "Issued a DCF-based firm valuation of the Argentine chain of supermarkets ”La Anónima”",
       image:
-        "https://freeman.tulane.edu/sites/default/files/burkenroad.logo.jpg",
+        "https://freeman.tulane.edu/sites/default/files/styles/content_max/public/tu-freeman-d9/burkenroad.logo.jpg?itok=9J1fb2x3",
       imageAlt: "Burkenroad Logo",
       footerLink: []
     }
